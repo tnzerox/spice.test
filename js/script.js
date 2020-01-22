@@ -11,7 +11,6 @@ function findPosition() {
     var string = document.getElementById("string").value;
     var letter = document.getElementById("letter").value;
 
-    // converting string value to string format
 
     string = String(string);
 
@@ -31,7 +30,7 @@ function findPosition() {
 
     // getting first position of character in string
 
-    document.getElementById("show").innerHTML = indexes[0];
+    document.getElementById("show").innerHTML = indexes[0] += 1;
 }
 
 
