@@ -25,12 +25,14 @@ function findPosition() {
     // if character is not found in string
 
     if (indexes.length < 1 || indexes == undefined) {
-        indexes[0] = 'N/A';
+        indexes = 'N/A';
+    } else {
+        indexes = indexes[0] += 1
     }
 
     // getting first position of character in string
 
-    document.getElementById("show").innerHTML = indexes[0] += 1;
+    document.getElementById("show").innerHTML = indexes;
 }
 
 
