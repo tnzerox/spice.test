@@ -29,3 +29,56 @@ function findPosition() {
     document.getElementById("show").innerHTML = indexes[0];
 }
 
+
+// test 2
+
+//helper function to count character number
+
+function character_count(str, char) {
+
+    var i, j, character_count = 0;
+    for (i = 0; i < string.length; ++i) {
+        if (str.charAt(i) == char) {
+            character_count += 1;
+        }
+
+    }
+    return character_count;
+}
+
+// function to count character 
+function output2() {
+    var string1 = document.getElementById("string1").value;
+    string = String(string1);
+
+    // refining dublicate character in string
+
+    var x, refine = []; for (x = 0; x < string.length; ++x) {
+        var found = false;
+        for (var a = 0; a < refine.length; ++a) {
+            if (string[x] == refine[a]) {
+                found = true;
+            }
+        }
+        if (found == false) {
+
+            refine.push(string[x]);
+        }
+    }
+
+    // bringing out the output
+
+    var x, output = []; for (x = 0; x < refine.length; ++x) {
+        output.push(refine[x] + ' : ' + character_count(string, refine[x]));
+    }
+
+    document.getElementById("show1").innerHTML = output.join("<br/>");
+
+    // calculating total character number
+
+    document.getElementById("totalCharacter").innerHTML = string.length;
+}
+
+
+
+
