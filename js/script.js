@@ -1,3 +1,8 @@
+
+
+// test 1 --------------------------------------------------------------------
+
+
 // function to find character in string
 
 function findPosition() {
@@ -30,7 +35,7 @@ function findPosition() {
 }
 
 
-// test 2
+// test 2 ------------------------------------------------------------------------
 
 //helper function to count character number
 
@@ -51,7 +56,7 @@ function output2() {
     var string1 = document.getElementById("string1").value;
     string = String(string1);
 
-    // refining dublicate character in string
+    // refining duplicate character in string
 
     var x, refine = []; for (x = 0; x < string.length; ++x) {
         var found = false;
@@ -78,6 +83,51 @@ function output2() {
 
     document.getElementById("totalCharacter").innerHTML = string.length;
 }
+
+
+// test 3 --------------------------------------------------------------
+
+// calculator
+
+function input(val) {
+    var input = val;
+
+    if (input === '=') {
+        //checking if the input is null
+        if (document.getElementById('calcInput').value != '') {
+            //catching syntax error
+            try {
+                //if the value is infinity
+                if (eval(document.getElementById('calcInput').value) == Infinity) {
+                    document.getElementById('calcInput').value = 'Error: Divisible by zero !';
+                    document.getElementById("calculator").innerHTML = 'Error: Divisible by zero !';
+                } else {
+                    document.getElementById('calcInput').value = eval(document.getElementById('calcInput').value);
+                    document.getElementById("calculator").innerHTML = document.getElementById('calcInput').value;
+                }
+
+            } catch (err) {
+                //catching syntax error
+                if (err instanceof SyntaxError) {
+                    document.getElementById('calcInput').value = 'Error: Syntax Error!';
+                    document.getElementById("calculator").innerHTML = 'Error: Syntax Error!';
+                }
+            }
+        }
+        //when cancle is clicked
+    } else if (input === 'c') {
+        document.getElementById('calcInput').value = '';
+        document.getElementById("calculator").innerHTML = '';
+    } else {
+        document.getElementById('calcInput').value += val;
+    }
+
+}
+
+// <-----------------------end------------------------>
+
+
+
 
 
 

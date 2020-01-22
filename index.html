@@ -5,8 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <!-- CSS Style -->
-    <link rel="stylesheet" href="css/style.css">
+
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <title>Document</title>
@@ -14,6 +13,9 @@
 
 <body>
     <div class="container mt-5 mb-5">
+
+        <!-- 1st test finding position of character in string -->
+
         <h5>Recursion Test</h5>
         <div class="row border">
             <div class="col-md-6 mt-5 mb-5">
@@ -37,6 +39,10 @@
             </div>
         </div>
 
+        <!-- end of 1st test -->
+
+        <!-- 2nd test finding individual character count in string -->
+
         <h5 class="mt-5 mb-5">Test 2</h5>
         <div class="row border">
             <div class="col-md-6">
@@ -56,11 +62,80 @@
             </div>
         </div>
 
+        <!-- end of 2nd test -->
 
+        <!-- 3rd test performing calculation -->
 
+        <h5 class="mt-5 mb-5">Calculator</h5>
 
+        <div class="row border mb-5">
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for=""></label>
+                    <input type="text" disabled class="form-control" id="calcInput" placeholder="Input Number ">
+                </div>
+                <div class="col-md-6">
+                    <div class="row">
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-secondary mt-1 mb-1" onclick="input(1)">1</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-secondary mt-1 mb-1" onclick="input(2)">2</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-secondary mt-1 mb-1" onclick="input(3)">3</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-secondary mt-1 mb-1" onclick="input('c')">c</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-secondary mt-1 mb-1" onclick="input(4)">4</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-secondary mt-1 mb-1" onclick="input(5)">5</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-secondary mt-1 mb-1" onclick="input(6)">6</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-secondary mt-1 mb-1" onclick="input('+')">+</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-secondary mt-1 mb-1" onclick="input(7)">7</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-secondary mt-1 mb-1" onclick="input(8)">8</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-secondary mt-1 mb-1" onclick="input(9)">9</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-secondary mt-1 mb-1" onclick="input(0)">0</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-secondary mt-1 mb-1" onclick="input('-')">-</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-secondary mt-1 mb-1" onclick="input('*')">*</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-secondary mt-1 mb-1" onclick="input('/')">/</button>
+                        </div>
+                        <div class="col-md-3">
+                            <button class="btn btn-outline-secondary mt-1 mb-1" onclick="input('=')">=</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 text-center mt-2 mb-5">
+                <h5>Output</h5>
+                <hr>
+                <h4 id="calculator"></h4>
+            </div>
 
-    </div>
+            <!-- end of 3rd test -->
+
+        </div>
 </body>
 <!-- script function for test output-->
 <script src="js/script.js"></script>
